@@ -1,0 +1,376 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Recipe",
+            "RecipeIngredient",
+            "Unit",
+            "Ingredient"
+        ],
+        "stores": [
+            "Recipes",
+            "RecipeIngredients",
+            "Units",
+            "Ingredients"
+        ],
+        "views": [
+            "recipe.Sidebar",
+            "Header",
+            "recipe.View",
+            "ingredient.List",
+            "ViewContainer",
+            "UnitGridPanel",
+            "IngredientGridPanel",
+            "RecipeFormPanel",
+            "MainTabPanel",
+            "RecipesGridPanel",
+            "RecipeEditPanel",
+            "RecipeIngredientsGrid"
+        ],
+        "designer|userClassName": "Recipes"
+    },
+    "designerId": "2acc0743-9117-4234-8b8a-cfd963de5421",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "recipeSideBar",
+                "selector": "recipesidebar"
+            },
+            "designerId": "6e4df73b-cf37-483b-ab9e-32344074383b"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "recipeView",
+                "selector": "recipeview"
+            },
+            "designerId": "d98f1583-fcf7-48b0-b6f9-db42b0c2ee15"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "ingredientList",
+                "selector": "ingredientlist"
+            },
+            "designerId": "4fe3ee86-181a-4833-bf71-5ec28d69c608"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "recipeFormPanel",
+                "selector": "recipeformpanel"
+            },
+            "designerId": "1bd066dc-cfb1-4498-8989-fda0c848c113"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "recipeGridPanel",
+                "selector": "recipesgridpanel"
+            },
+            "designerId": "f48be4c3-d07a-455a-85ca-c1fdf819065d"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "recipeIngredientsGrid",
+                "selector": "recipeingredientsgrid"
+            },
+            "designerId": "d249854c-197f-4247-9e13-b634b2a14ab9"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onRecipesStoreLoad",
+                "designer|params": [
+                    "store",
+                    "records"
+                ],
+                "implHandler": [
+                    "Ext.defer(function() {\r",
+                    "    if (records.length) {\r",
+                    "        this.getRecipeSideBar().getSelectionModel().select(records[0]);\r",
+                    "    }\r",
+                    "}, 1000, this);"
+                ]
+            },
+            "designerId": "18aba107-51d3-4f56-9161-5b42e31741c2"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "showRecipe",
+                "designer|params": [
+                    "record",
+                    "id"
+                ],
+                "implHandler": [
+                    "var me = this;\r",
+                    "var idToCheck = record.get('id');\r",
+                    "me.getRecipeView().bind(record);\r",
+                    "var is = Ext.getStore('RecipeIngredients');\r",
+                    "is.clearFilter(true);\r",
+                    "is.filter('recipe_id', idToCheck);\r",
+                    "me.getIngredientList().bind(record, is);"
+                ]
+            },
+            "designerId": "0c8d703f-6dd8-47c9-85ed-e53ea664b4dc"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "init",
+                "designer|params": [
+                    "application"
+                ],
+                "implHandler": [
+                    "this.getRecipesStore().on({\r",
+                    "    scope: this,\r",
+                    "    load : this.onRecipesStoreLoad\r",
+                    "});"
+                ]
+            },
+            "designerId": "e7142329-6fc3-489d-9800-be08f6e829f0"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onSaveRecipe",
+                "implHandler": [
+                    "var formpanel = this.getRecipeFormPanel();\r",
+                    "var form = formpanel.getForm();\r",
+                    "var selectedRecord = form.getRecord();\r",
+                    "var selectedValues = form.getValues();\r",
+                    "selectedRecord.set(selectedValues);\r",
+                    "\r",
+                    "if (this.adding){\r",
+                    "this.adding = undefined;\r",
+                    "  var store = Ext.getStore('Recipes');  \r",
+                    "    store.add(selectedRecord);\r",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "button[action='saveRecipe']"
+            },
+            "designerId": "47f1f5b7-782a-4c25-b6df-ad6686c21cc6"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onSidebarSelectionChange",
+                "implHandler": [
+                    "if (selected.length){\r",
+                    "    this.showRecipe(selected[0]);\r",
+                    "}"
+                ],
+                "name": "selectionchange",
+                "scope": "me",
+                "designer|targetType": "Ext.view.View",
+                "designer|controlQuery": "recipesidebar"
+            },
+            "designerId": "70593815-c06e-439f-bb5d-f76cd654e484"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onAddRecipe",
+                "implHandler": [
+                    "var store = Ext.getStore('Recipes');\r",
+                    "var newRecord = Ext.create('BeerBuilder.model.Recipe');\r",
+                    "var formpanel = this.getRecipeFormPanel();\r",
+                    "var form = formpanel.getForm();\r",
+                    "form.loadRecord(newRecord);\r",
+                    "this.adding = true;\r",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "button[action='addRecipe']"
+            },
+            "designerId": "c1e0c961-6932-42cb-96f0-4bd51c604ea2"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onGridpanelSelect",
+                "implHandler": [
+                    "var formpanel = this.getRecipeFormPanel();\r",
+                    "var form = formpanel.getForm();\r",
+                    "var recordId = record.get('id');\r",
+                    "\r",
+                    "form.loadRecord(record);\r",
+                    "this.adding = false;\r",
+                    "\r",
+                    "var selectedValues = form.getValues();\r",
+                    "record.set(selectedValues);\r",
+                    "\r",
+                    "var is = Ext.getStore('RecipeIngredients');\r",
+                    "is.clearFilter(true);\r",
+                    "is.filter('recipe_id', recordId);\r",
+                    "\r",
+                    "var grid = this.getRecipeIngredientsGrid();\r",
+                    "grid.reconfigure(is);\r",
+                    ""
+                ],
+                "name": "select",
+                "scope": "me",
+                "designer|targetType": "Ext.grid.Panel",
+                "designer|controlQuery": "recipesgridpanel"
+            },
+            "designerId": "3cc49c66-8b2e-4d6f-a6d7-cf18f4bd5188"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onAddIngredientToRecipe",
+                "implHandler": [
+                    "debugger;\r",
+                    "var formpanel = this.getRecipeFormPanel();\r",
+                    "var form = formpanel.getForm();\r",
+                    "var record = form.getRecord();\r",
+                    "var recipeId = record.get('id');\r",
+                    "\r",
+                    "var ingredientfield = this.getAddIngredientToRecipe();\r",
+                    "var ingredientId = ingredientfield.getValue();\r",
+                    "\r",
+                    "var qtyfield = this.getAddQtyToRecipe();\r",
+                    "var qty = qtyfield.getValue();\r",
+                    "\r",
+                    "var unitfield = this.getAddUnitToRecipe();\r",
+                    "var unitId = unitfield.getValue();\r",
+                    "\r",
+                    "var store = Ext.getStore('RecipeIngredients');\r",
+                    "var newRecord = Ext.create('BeerBuilder.model.RecipeIngredient');\r",
+                    "newRecord.set('recipe_id',recipeId);\r",
+                    "newRecord.set('ingredient_id', ingredientId);\r",
+                    "newRecord.set('qty',qty);\r",
+                    "newRecord.set('unit_id',unitId);\r",
+                    "store.add(newRecord);"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "button[action='addIngredientToRecipe']"
+            },
+            "designerId": "3781ddfe-b48d-487f-9be4-1702669af313"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "addIngredientToRecipe",
+                "selector": "#addingredienttorecipe"
+            },
+            "designerId": "409391fd-0eb5-4d0b-b31a-8b773ffcefae"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "addQtyToRecipe",
+                "selector": "#addqtytorecipe"
+            },
+            "designerId": "0ece4e17-c4ba-464a-861c-e40ed3f6769f"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "addUnitToRecipe",
+                "selector": "#addunittorecipe"
+            },
+            "designerId": "c6cbd3d5-c35a-444a-a1ec-215333ae2ceb"
+        }
+    ]
+}

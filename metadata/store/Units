@@ -1,0 +1,66 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "autoSync": true,
+        "model": "Unit",
+        "storeId": "Units",
+        "designer|userClassName": "Units",
+        "singleton": true,
+        "data": [
+            "[{\r",
+            "    \"id\": 1,\r",
+            "    \"abbr\": \"lb\",\r",
+            "    \"name\": \"Pound\"\r",
+            "}, {\r",
+            "    \"id\": 2,\r",
+            "    \"abbr\": \"oz\",\r",
+            "    \"name\": \"Ounce\"\r",
+            "}, {\r",
+            "    \"id\": 3,\r",
+            "    \"abbr\": \"tsp\",\r",
+            "    \"name\": \"Teaspon\"\r",
+            "}, {\r",
+            "    \"id\": 4,\r",
+            "    \"abbr\": \"tbsp\",\r",
+            "    \"name\": \"Tablespoon\"\r",
+            "}, {\r",
+            "    \"id\": 5,\r",
+            "    \"abbr\": \"pt\",\r",
+            "    \"name\": \"Pint\"\r",
+            "}, {\r",
+            "    \"id\": 6,\r",
+            "    \"abbr\": \"qt\",\r",
+            "    \"name\": \"Quart\"\r",
+            "}, {\r",
+            "    \"id\": 7,\r",
+            "    \"abbr\": \"gal\",\r",
+            "    \"name\": \"Gallon\"\r",
+            "}, {\r",
+            "    \"id\": 8,\r",
+            "    \"abbr\": \"gr\",\r",
+            "    \"name\": \"Grain\"\r",
+            "}]"
+        ]
+    },
+    "designerId": "449666da-cd16-4626-925c-8a8513603609",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "unit_ls"
+            },
+            "designerId": "1a7a8831-e134-4938-81e2-45e6317cbc50"
+        }
+    ]
+}

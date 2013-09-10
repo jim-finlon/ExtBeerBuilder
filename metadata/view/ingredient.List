@@ -1,0 +1,163 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "border": false,
+        "height": null,
+        "id": null,
+        "itemId": null,
+        "width": null,
+        "designer|userClassName": "ingredient.List",
+        "designer|userAlias": "ingredientlist",
+        "layout": "card",
+        "title": null
+    },
+    "designerId": "250663dc-0a15-4703-9ccc-0304370da706",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "Ingredients",
+                "itemId": "header",
+                "dock": "top"
+            },
+            "configAlternates": {
+                "html": "string"
+            },
+            "designerId": "66c66aa0-023e-461e-a56a-046d4479f36d",
+            "masterInstanceId": "49e4ebe0-8506-47b8-b3de-b06484a85454"
+        },
+        {
+            "type": "Ext.view.View",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": "recipeingredient-list",
+                "itemId": "dataview",
+                "designer|displayName": "dataview",
+                "autoScroll": true,
+                "itemSelector": ".recipeingredient",
+                "store": null
+            },
+            "designerId": "8b56b26e-aaed-49de-8cb4-f2871b56813b",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "tpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "implHandler": [
+                            "<tpl for=\".\">\r",
+                            "    <div class=\"recipeingredient\">\r",
+                            "        <div>{qty} {[this.getUnitAbbr(values.unit_id)]} {[this.getIngredientName(values.ingredient_id)]}</div>\r",
+                            "    </div>\r",
+                            "</tpl>"
+                        ],
+                        "designer|displayName": "tpl"
+                    },
+                    "designerId": "06b9d122-7e72-4072-ade1-57d45eb05ff1",
+                    "cn": [
+                        {
+                            "type": "templatefunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "getIngredientName",
+                                "designer|params": [
+                                    "v"
+                                ],
+                                "implHandler": [
+                                    "var s = Ext.getStore('Ingredients');\r",
+                                    "var i = s.getAt(s.find('id', v)); \r",
+                                    "return i.get('name');"
+                                ]
+                            },
+                            "designerId": "d5cbadf0-e5d7-46fb-95f1-45f684a7ce6d"
+                        },
+                        {
+                            "type": "templatefunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "getUnitName",
+                                "designer|params": [
+                                    "v"
+                                ],
+                                "implHandler": [
+                                    "var s = Ext.getStore('Units');\r",
+                                    "var u = s.getAt(s.find('id',v));\r",
+                                    "return u.get('name');"
+                                ]
+                            },
+                            "designerId": "13a4280c-74d1-4fd5-8cee-94e5efd96a99"
+                        },
+                        {
+                            "type": "templatefunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "getUnitAbbr",
+                                "designer|params": [
+                                    "v"
+                                ],
+                                "implHandler": [
+                                    "var s = Ext.getStore('Units');\r",
+                                    "var u = s.getAt(s.find('id',v));\r",
+                                    "return u.get('abbr');"
+                                ]
+                            },
+                            "designerId": "bc790a51-91a9-4ec3-acef-e001bf8c02f8"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "bind",
+                "designer|params": [
+                    "record,store"
+                ],
+                "implHandler": [
+                    "is = Ext.getStore('RecipeIngredients');\r",
+                    "is.filter(function (r){\r",
+                    "    var rid = r.get('recipe_id');\r",
+                    "    return record.raw.id == rid;\r",
+                    "});\r",
+                    "this.child('#dataview').bindStore(is);"
+                ]
+            },
+            "designerId": "45ce85e8-c229-4ea6-89c1-660d996de611"
+        }
+    ]
+}

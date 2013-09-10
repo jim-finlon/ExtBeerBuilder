@@ -1,0 +1,133 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "height": null,
+        "width": null,
+        "designer|userClassName": "IngredientGridPanel",
+        "designer|userAlias": "ingredientgridpanel",
+        "resizable": true,
+        "title": "Ingredients",
+        "store": "Ingredients"
+    },
+    "configAlternates": {
+        "resizable": "boolean"
+    },
+    "designerId": "44f9766f-d666-4ef0-b39f-cfde70e15fab",
+    "cn": [
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "name",
+                "text": "Ingredient",
+                "flex": 1
+            },
+            "designerId": "6b6bd15c-b085-44b0-9796-444ebd65e8e7",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "editor",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "width": null,
+                        "designer|displayName": "Ingredient Name Editor",
+                        "allowBlank": false,
+                        "size": 100
+                    },
+                    "designerId": "83de9dca-636a-41ae-aaba-a57d5fdb6c70"
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.View",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "IngredientGridView"
+            },
+            "designerId": "94b0f74c-3822-4921-9f8e-f8507917e3df"
+        },
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top",
+                "designer|displayName": "Ingredient Toolbar"
+            },
+            "designerId": "5f6eb2f5-9a84-43b7-8564-f60feefc8dfc",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "text": "Add Ingredient"
+                    },
+                    "designerId": "a8f32af2-5fb5-4992-94af-43c0de7a4f29",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "var i = Ext.create('BeerBuilder.model.Ingredient', {\r",
+                                    "    name: 'new'\r",
+                                    "});\r",
+                                    "\r",
+                                    "ingredientgrid = this.up('ingredientgridpanel');\r",
+                                    "ingredientgrid.getStore().insert(0,i);\r",
+                                    "ingredientgrid.getPlugin('ingredientroweditor').startEdit();"
+                                ]
+                            },
+                            "designerId": "9798f31f-0630-42ef-8bff-69e69303a9d8"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.plugin.RowEditing",
+            "reference": {
+                "name": "plugins",
+                "type": "array"
+            },
+            "codeClass": "Ext.grid.plugin.RowEditing",
+            "userConfig": {
+                "pluginId": "ingredientroweditor"
+            },
+            "designerId": "d083d5c7-461e-4c58-b3a0-d80cd72237f7"
+        }
+    ]
+}

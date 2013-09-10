@@ -1,0 +1,43 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "autoSync": true,
+        "model": "Ingredient",
+        "storeId": "Ingredients",
+        "designer|userClassName": "Ingredients",
+        "singleton": true,
+        "data": [
+            "    [{\r",
+            "        \"id\": 1,\r",
+            "        \"name\": \"Golden Dry DME\"\r",
+            "    }, {\r",
+            "        \"id\": 2,\r",
+            "        \"name\": \"Amber Light DME\"\r",
+            "    }, {\r",
+            "        \"id\": 3,\r",
+            "        \"name\": \"Vienna Malt\"\r",
+            "    }]"
+        ]
+    },
+    "designerId": "6adddf0b-0682-435d-9a1b-d7f53495ea9a",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "ingredient_ls"
+            },
+            "designerId": "135e866d-bceb-45d8-99b3-69a17251e08e"
+        }
+    ]
+}

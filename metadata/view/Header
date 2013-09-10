@@ -1,0 +1,17 @@
+{
+    "type": "Ext.Component",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "baseCls": "app-header",
+        "border": 1,
+        "height": null,
+        "width": null,
+        "designer|userClassName": "Header",
+        "designer|userAlias": "header"
+    },
+    "designerId": "49e4ebe0-8506-47b8-b3de-b06484a85454"
+}

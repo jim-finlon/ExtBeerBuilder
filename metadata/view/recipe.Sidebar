@@ -1,0 +1,41 @@
+{
+    "type": "Ext.view.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "border": false,
+        "cls": "sidebar-list",
+        "height": null,
+        "id": null,
+        "itemId": null,
+        "width": null,
+        "designer|userClassName": "recipe.Sidebar",
+        "designer|userAlias": "recipesidebar",
+        "itemSelector": ".product",
+        "store": "Recipes"
+    },
+    "designerId": "e54c07cb-fd8a-4cbd-b33b-82cefdc9eff7",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "tpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "implHandler": [
+                    "<div class=\"sidebar-title\">Recipes</div>\r",
+                    "<tpl for=\".\">\r",
+                    "    <div class=\"product\">{name}</div>\r",
+                    "</tpl>"
+                ],
+                "designer|displayName": null
+            },
+            "designerId": "fe90c15d-5c4b-4410-bec6-22ceea6c89d1"
+        }
+    ]
+}

@@ -1,0 +1,113 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "idProperty": null,
+        "designer|userClassName": "Recipe"
+    },
+    "designerId": "98b278f6-7701-4e84-aef1-f7f091d44afb",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id",
+                "type": "int"
+            },
+            "designerId": "908648f6-283c-4cd1-8a58-caecedd8705c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name"
+            },
+            "designerId": "84d2088e-2dbd-42f7-84d5-c404c846af24"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "type"
+            },
+            "designerId": "2f55e315-e39f-4eaf-86c0-50d4f803c2a4"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "style"
+            },
+            "designerId": "9bcdba97-3407-4e9d-9191-d7f9f1fc8330"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "instructions"
+            },
+            "designerId": "1bacfa29-4540-4f34-ad43-6c2ccbafc862"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "description"
+            },
+            "designerId": "d5c17e3c-a6fe-4efe-b132-83d0ef4a7e0f"
+        },
+        {
+            "type": "Ext.data.association.HasMany",
+            "reference": {
+                "name": "hasMany",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "associationKey": "recipeingredients",
+                "model": "RecipeIngredient",
+                "designer|displayName": "hasManyRecipeIngredient",
+                "foreignKey": "recipe_id",
+                "name": "recipeingredients"
+            },
+            "designerId": "eb7a3b1f-04ab-438a-ace1-8d1769ebf4c3"
+        },
+        {
+            "type": "Ext.data.SequentialIdGenerator",
+            "reference": {
+                "name": "idgen",
+                "type": "object"
+            },
+            "codeClass": null,
+            "designerId": "8a47b1ba-674b-49ee-b1cf-aa4a62f4460c"
+        }
+    ]
+}

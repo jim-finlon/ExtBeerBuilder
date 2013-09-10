@@ -1,0 +1,162 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "UnitGridPanel",
+        "designer|userAlias": "unitgridpanel",
+        "resizable": true,
+        "title": "Units",
+        "store": "Units"
+    },
+    "configAlternates": {
+        "resizable": "boolean"
+    },
+    "designerId": "5199159d-43b5-4389-bf63-b6bab58372d1",
+    "cn": [
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top",
+                "width": null,
+                "designer|displayName": "Unit Toolbar"
+            },
+            "designerId": "c3fe6f19-b859-43b4-992c-21a68db606fb",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "text": "Add New Unit"
+                    },
+                    "designerId": "205bdf6c-20ea-4717-bfee-ed3d546951d2",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "var u = Ext.create('BeerBuilder.model.Unit', {\r",
+                                    "    name: 'new'\r",
+                                    "});\r",
+                                    "unitgrid = this.up('unitgridpanel');\r",
+                                    "unitgrid.getStore().insert(0,u);\r",
+                                    "scoregrid.getPlugin('unitroweditor').startEdit();"
+                                ]
+                            },
+                            "designerId": "0bba8647-cecf-453a-bfe9-23ad6e987c3a"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "name",
+                "text": "Unit Name",
+                "flex": 1
+            },
+            "designerId": "aba9e4fd-e1d1-45ff-9904-88ea8541bca4",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "editor",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "minWidth": null,
+                        "width": null,
+                        "designer|displayName": "Unit Name Editor",
+                        "allowBlank": false,
+                        "size": 60
+                    },
+                    "designerId": "7a906473-65e9-4882-968e-0e6b207b6836"
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "abbr",
+                "text": "Abbr",
+                "flex": 1
+            },
+            "designerId": "e48f13cc-0637-4497-94f5-719d62a88aa0",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "editor",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "width": null,
+                        "designer|displayName": "Unit Abbr Editor",
+                        "allowBlank": false
+                    },
+                    "designerId": "48e974be-62ec-4dd6-8c2d-a410a5b311a2"
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.View",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "UnitGridView"
+            },
+            "designerId": "edd46c47-4e7b-4b57-a5ba-defdeea840ba"
+        },
+        {
+            "type": "Ext.grid.plugin.RowEditing",
+            "reference": {
+                "name": "plugins",
+                "type": "array"
+            },
+            "codeClass": "Ext.grid.plugin.RowEditing",
+            "userConfig": {
+                "pluginId": "unitroweditor"
+            },
+            "designerId": "30f4363d-63a3-43bf-9498-6c99d62acc8a"
+        }
+    ]
+}

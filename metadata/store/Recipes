@@ -1,0 +1,50 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "autoSync": true,
+        "model": "Recipe",
+        "storeId": "Recipes",
+        "designer|userClassName": "Recipes",
+        "designer|userAlias": "recipes",
+        "singleton": true,
+        "data": [
+            "[\r",
+            "    {\"id\": 1,\r",
+            "        \"name\": \"4C's IPA\",\r",
+            "        \"style\": \"India Pale Ale\",\r",
+            "        \"type\": \"extract\",\r",
+            "        \"instructions\": \"<ol><li>Heat 2 Gals to 165, then steep Vienna and Crystals for 30 mins.</li><li>Remove Grains and add DME and heat to a Boil.</li><li>5 mins after boil, begin adding Hops add intended intervals.</li><li>After 60 mins, turn off heat and cover, Prepare Ice Bath.</li><li>I like to have 2 gals of Ice Cold Water from my Freezer ready in the Fermenter, before I add the Wort.</li><li>Then I throw in some Ice, and a Freezer Pack (after being sanitized) and then fill the Fermenter up with more Ice Cold Water. (I havent invested in any cool toys like Wort Chillers).</li><li>Bring the temp down to reccommended Levels (Below 80) and pitch Yeast.</li><li>I didnt use a starter, but i am sure it wouldnt hurt. I have the luxury of a Converted Freezer Chest to store my Fermenter.</li><li>I Fermented at 58 to reduce any esters being produced. (I am going to try 65 next time to see if there is a difference).</li><li>I brewed this a couple of months ago and it came out Great.</li><li>I have a few Friends that love IPS's and asked me to take a shot at it and I got great reviews and will continue to Brew this year round to keep in stock</li></ol>\",\r",
+            "        \"description\": \"<p>I got the name from using 4 Hops that all start with the Letter C, very clever... This brew ended up Citrusy with a Clean Finish. Very Hoppy but doen't have a Bite to it. The color is a Golden Copper Haze, because I chose not to use any Finings like Irish Moss. The aroma is Citrusy, Grapefruity</p>\"\r",
+            "    },\r",
+            "        {\"id\": 2,\r",
+            "        \"name\": \"Bobs IPA\",\r",
+            "        \"style\": \"Bobs Pale Ale\",\r",
+            "        \"type\": \"bob extract\",\r",
+            "        \"instructions\": \"<ol><li>Heat 2 Gals to 165, then steep Vienna and Crystals for 30 mins.</li><li>Remove Grains and add DME and heat to a Boil.</li><li>5 mins after boil, begin adding Hops add intended intervals.</li><li>After 60 mins, turn off heat and cover, Prepare Ice Bath.</li><li>I like to have 2 gals of Ice Cold Water from my Freezer ready in the Fermenter, before I add the Wort.</li><li>Then I throw in some Ice, and a Freezer Pack (after being sanitized) and then fill the Fermenter up with more Ice Cold Water. (I havent invested in any cool toys like Wort Chillers).</li><li>Bring the temp down to reccommended Levels (Below 80) and pitch Yeast.</li><li>I didnt use a starter, but i am sure it wouldnt hurt. I have the luxury of a Converted Freezer Chest to store my Fermenter.</li><li>I Fermented at 58 to reduce any esters being produced. (I am going to try 65 next time to see if there is a difference).</li><li>I brewed this a couple of months ago and it came out Great.</li><li>I have a few Friends that love IPS's and asked me to take a shot at it and I got great reviews and will continue to Brew this year round to keep in stock</li></ol>\",\r",
+            "        \"description\": \"<p>I got the name from using 4 Hops that all start with the Letter C, very clever... This brew ended up Citrusy with a Clean Finish. Very Hoppy but doen't have a Bite to it. The color is a Golden Copper Haze, because I chose not to use any Finings like Irish Moss. The aroma is Citrusy, Grapefruity</p>\"\r",
+            "    }\r",
+            "]"
+        ]
+    },
+    "designerId": "99b0f571-7d70-424f-8aa5-5e3833e4993c",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "recipe_ls"
+            },
+            "designerId": "17b066c0-839a-43e8-aba3-c2e4d531dd9e"
+        }
+    ]
+}

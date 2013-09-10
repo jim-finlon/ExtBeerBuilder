@@ -1,0 +1,122 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "RecipeFormPanel",
+        "designer|userAlias": "recipeformpanel",
+        "title": "Recipe"
+    },
+    "designerId": "986b764d-836d-4d3e-b56a-e65eac1033ed",
+    "cn": [
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "RecipeBar"
+            },
+            "designerId": "40e4eee5-cb51-4a77-86a4-85735c97fb77",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "saveRecipe",
+                        "layout|flex": null,
+                        "text": "Save Recipe"
+                    },
+                    "designerId": "7bb08b86-5dbc-44fa-827b-2cc6eb7dd7c8",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": "100%",
+                "padding": "2 0 0 0 ",
+                "fieldLabel": "Recipe Name",
+                "name": "name"
+            },
+            "designerId": "aa9df190-5ba1-4a49-aaf9-35b417ed7787"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": "100%",
+                "fieldLabel": "Type",
+                "name": "type"
+            },
+            "designerId": "4778816a-6b2a-4392-a4d4-e3cdca092a95"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": "100%",
+                "fieldLabel": "Style",
+                "name": "style"
+            },
+            "designerId": "23280854-46c6-4af9-873d-ad4fc33fe899"
+        },
+        {
+            "type": "Ext.form.field.TextArea",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": "100%",
+                "fieldLabel": "Description",
+                "name": "description"
+            },
+            "designerId": "5f72b727-38f2-456f-b3f9-e36fd8ae176c"
+        },
+        {
+            "type": "Ext.form.field.TextArea",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": "100%",
+                "fieldLabel": "Instructions",
+                "name": "instructions"
+            },
+            "designerId": "c885b6ac-eb7f-4c1d-9103-779b589741a6"
+        }
+    ]
+}

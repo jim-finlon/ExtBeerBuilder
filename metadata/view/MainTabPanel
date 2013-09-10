@@ -1,0 +1,106 @@
+{
+    "type": "Ext.tab.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "height": 800,
+        "width": null,
+        "designer|userClassName": "MainTabPanel",
+        "designer|userAlias": "maintabpanel",
+        "designer|initialView": true,
+        "activeTab": 0
+    },
+    "designerId": "ff582164-a4b8-4752-aedb-a501d81012ba",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "4c3f931f-be91-4829-8730-fde9d33f50a4",
+            "masterInstanceId": "3eb18d10-d468-4c8c-b737-51c1252f3000",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "b564b524-a696-41fb-a9c3-d8bbc3d4749d"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "b5afc66c-a0b3-4e97-b69c-bb0267c29d18",
+            "masterInstanceId": "5199159d-43b5-4389-bf63-b6bab58372d1",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "9cb8d009-7132-437d-85ea-edc244d7bb96"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "e8e7c621-104d-4875-877e-1fc3daa02a35",
+            "masterInstanceId": "44f9766f-d666-4ef0-b39f-cfde70e15fab",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "a37f0675-195a-4154-ac4e-981f54bd44c4"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Edit Recipes"
+            },
+            "designerId": "87c4c248-4cc5-42d3-8b10-a147e3f75a0a",
+            "masterInstanceId": "2adef336-54f3-4ab7-b92e-140b8e3016d0",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "09499696-5c09-45a2-84ce-0b5589967cdf"
+                }
+            ]
+        }
+    ]
+}

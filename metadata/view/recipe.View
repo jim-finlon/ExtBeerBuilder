@@ -1,0 +1,82 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "middle",
+        "container|pack": "center",
+        "border": null,
+        "cls": "item-ct",
+        "height": null,
+        "id": null,
+        "itemId": "recipeview",
+        "width": null,
+        "designer|userClassName": "recipe.View",
+        "designer|userAlias": "recipeview",
+        "autoScroll": true,
+        "layout": "hbox",
+        "bodyBorder": false,
+        "title": null
+    },
+    "designerId": "a68d2ea2-f6ec-4fbf-a6cc-567a1efaadcc",
+    "cn": [
+        {
+            "type": "Ext.Component",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "border": false,
+                "itemId": "contentCt",
+                "width": 500
+            },
+            "designerId": "1c095de4-e4c1-4c44-8e27-895cfbd705e4",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "tpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "implHandler": [
+                            "<div class=\"name\">Recipe Name: {name}</div>\r",
+                            "<div>Type: {type}</div>\r",
+                            "<div>Style: {style}</div>\r",
+                            "<div>Description:</div>\r",
+                            "<div class=\"description\">{description}</div>\r",
+                            "<div>Instructions:</div>\r",
+                            "<div class=\"directions\">{instructions}</div>"
+                        ],
+                        "designer|displayName": "tpl"
+                    },
+                    "designerId": "1273a47d-c78f-42df-b065-ba9175b5ffed"
+                }
+            ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "bind",
+                "designer|params": [
+                    "record"
+                ],
+                "implHandler": [
+                    "this.child('#contentCt').update(record.data);"
+                ]
+            },
+            "designerId": "fb491792-ea52-4ac9-9a6f-65c9930680c7"
+        }
+    ]
+}

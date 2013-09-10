@@ -1,0 +1,49 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "idProperty": null,
+        "designer|userClassName": "Ingredient"
+    },
+    "designerId": "ab601898-77d8-4461-af2e-789202cae5c4",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id",
+                "type": "int"
+            },
+            "designerId": "1a98a73e-d5c4-4d82-87df-713df3d927e0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name"
+            },
+            "designerId": "787a9e7b-5db8-423d-bd47-5e8fce02904d"
+        },
+        {
+            "type": "Ext.data.SequentialIdGenerator",
+            "reference": {
+                "name": "idgen",
+                "type": "object"
+            },
+            "codeClass": null,
+            "designerId": "fca313f1-af0d-460b-bd44-9eee77cd0cfa"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "css1",
+        "url": "resources/css/beerbuilder.css"
+    },
+    "designerId": "20b8ed3e-33b1-4310-b931-da7eb2ab3ce3"
+}

@@ -1,0 +1,238 @@
+{
+    "name": "BeerBuilder",
+    "settings": {
+        "spacesToIndent": 4,
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "urlPrefix": "http://localhost/sencha/Ext/BeerBuilder/",
+        "exportPath": "C:/inetpub/wwwroot/sencha/Ext/BeerBuilder",
+        "buildShouldOverwriteIndex": true
+    },
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 991,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "ext42",
+    "topInstanceFileMap": {
+        "f632f61b-5216-40f3-8bf0-07b1d02b775f": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "3eb18d10-d468-4c8c-b737-51c1252f3000": {
+            "paths": [
+                "metadata/view/ViewContainer",
+                "app/view/override/ViewContainer.js",
+                "app/view/ViewContainer.js"
+            ],
+            "className": "ViewContainer"
+        },
+        "49e4ebe0-8506-47b8-b3de-b06484a85454": {
+            "paths": [
+                "metadata/view/Header",
+                "app/view/override/Header.js",
+                "app/view/Header.js"
+            ],
+            "className": "Header"
+        },
+        "e54c07cb-fd8a-4cbd-b33b-82cefdc9eff7": {
+            "paths": [
+                "metadata/view/recipe.Sidebar",
+                "app/view/override/recipe/Sidebar.js",
+                "app/view/recipe/Sidebar.js"
+            ],
+            "className": "recipe.Sidebar"
+        },
+        "a68d2ea2-f6ec-4fbf-a6cc-567a1efaadcc": {
+            "paths": [
+                "metadata/view/recipe.View",
+                "app/view/override/recipe/View.js",
+                "app/view/recipe/View.js"
+            ],
+            "className": "recipe.View"
+        },
+        "250663dc-0a15-4703-9ccc-0304370da706": {
+            "paths": [
+                "metadata/view/ingredient.List",
+                "app/view/override/ingredient/List.js",
+                "app/view/ingredient/List.js"
+            ],
+            "className": "ingredient.List"
+        },
+        "449666da-cd16-4626-925c-8a8513603609": {
+            "paths": [
+                "metadata/store/Units",
+                "app/store/override/Units.js",
+                "app/store/Units.js"
+            ],
+            "className": "Units"
+        },
+        "6adddf0b-0682-435d-9a1b-d7f53495ea9a": {
+            "paths": [
+                "metadata/store/Ingredients",
+                "app/store/override/Ingredients.js",
+                "app/store/Ingredients.js"
+            ],
+            "className": "Ingredients"
+        },
+        "99b0f571-7d70-424f-8aa5-5e3833e4993c": {
+            "paths": [
+                "metadata/store/Recipes",
+                "app/store/override/Recipes.js",
+                "app/store/Recipes.js"
+            ],
+            "className": "Recipes"
+        },
+        "65b28d01-d592-4bd5-a786-5d03da487009": {
+            "paths": [
+                "metadata/store/RecipeIngredients",
+                "app/store/override/RecipeIngredients.js",
+                "app/store/RecipeIngredients.js"
+            ],
+            "className": "RecipeIngredients"
+        },
+        "98b278f6-7701-4e84-aef1-f7f091d44afb": {
+            "paths": [
+                "metadata/model/Recipe",
+                "app/model/override/Recipe.js",
+                "app/model/Recipe.js"
+            ],
+            "className": "Recipe"
+        },
+        "ab601898-77d8-4461-af2e-789202cae5c4": {
+            "paths": [
+                "metadata/model/Ingredient",
+                "app/model/override/Ingredient.js",
+                "app/model/Ingredient.js"
+            ],
+            "className": "Ingredient"
+        },
+        "55a49d6d-0d03-4dd6-b925-f260aa17ee13": {
+            "paths": [
+                "metadata/model/Unit",
+                "app/model/override/Unit.js",
+                "app/model/Unit.js"
+            ],
+            "className": "Unit"
+        },
+        "7d42c78f-079a-4c66-861c-d252a57632b8": {
+            "paths": [
+                "metadata/model/RecipeIngredient",
+                "app/model/override/RecipeIngredient.js",
+                "app/model/RecipeIngredient.js"
+            ],
+            "className": "RecipeIngredient"
+        },
+        "2acc0743-9117-4234-8b8a-cfd963de5421": {
+            "paths": [
+                "metadata/controller/Recipes",
+                "app/controller/override/Recipes.js",
+                "app/controller/Recipes.js"
+            ],
+            "className": "Recipes"
+        },
+        "5199159d-43b5-4389-bf63-b6bab58372d1": {
+            "paths": [
+                "metadata/view/UnitGridPanel",
+                "app/view/override/UnitGridPanel.js",
+                "app/view/UnitGridPanel.js"
+            ],
+            "className": "UnitGridPanel"
+        },
+        "44f9766f-d666-4ef0-b39f-cfde70e15fab": {
+            "paths": [
+                "metadata/view/IngredientGridPanel",
+                "app/view/override/IngredientGridPanel.js",
+                "app/view/IngredientGridPanel.js"
+            ],
+            "className": "IngredientGridPanel"
+        },
+        "986b764d-836d-4d3e-b56a-e65eac1033ed": {
+            "paths": [
+                "metadata/view/RecipeFormPanel",
+                "app/view/override/RecipeFormPanel.js",
+                "app/view/RecipeFormPanel.js"
+            ],
+            "className": "RecipeFormPanel"
+        },
+        "ff582164-a4b8-4752-aedb-a501d81012ba": {
+            "paths": [
+                "metadata/view/MainTabPanel",
+                "app/view/override/MainTabPanel.js",
+                "app/view/MainTabPanel.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "MainTabPanel"
+        },
+        "20b8ed3e-33b1-4310-b931-da7eb2ab3ce3": {
+            "paths": [
+                "metadata/resource/css1"
+            ],
+            "className": "css1"
+        },
+        "475bbb49-e554-4442-9c7f-bc824d77cb8c": {
+            "paths": [
+                "metadata/view/RecipesGridPanel",
+                "app/view/override/RecipesGridPanel.js",
+                "app/view/RecipesGridPanel.js"
+            ],
+            "className": "RecipesGridPanel"
+        },
+        "085ff9ae-58ee-4285-8605-dac1a682c983": {
+            "paths": [
+                "metadata/view/RecipeIngredientsGrid",
+                "app/view/override/RecipeIngredientsGrid.js",
+                "app/view/RecipeIngredientsGrid.js"
+            ],
+            "className": "RecipeIngredientsGrid"
+        },
+        "2adef336-54f3-4ab7-b92e-140b8e3016d0": {
+            "paths": [
+                "metadata/view/RecipeEditPanel",
+                "app/view/override/RecipeEditPanel.js",
+                "app/view/RecipeEditPanel.js"
+            ],
+            "className": "RecipeEditPanel"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "ff582164-a4b8-4752-aedb-a501d81012ba",
+            "3eb18d10-d468-4c8c-b737-51c1252f3000",
+            "49e4ebe0-8506-47b8-b3de-b06484a85454",
+            "e54c07cb-fd8a-4cbd-b33b-82cefdc9eff7",
+            "a68d2ea2-f6ec-4fbf-a6cc-567a1efaadcc",
+            "250663dc-0a15-4703-9ccc-0304370da706",
+            "5199159d-43b5-4389-bf63-b6bab58372d1",
+            "44f9766f-d666-4ef0-b39f-cfde70e15fab",
+            "986b764d-836d-4d3e-b56a-e65eac1033ed",
+            "475bbb49-e554-4442-9c7f-bc824d77cb8c",
+            "085ff9ae-58ee-4285-8605-dac1a682c983",
+            "2adef336-54f3-4ab7-b92e-140b8e3016d0"
+        ],
+        "store": [
+            "449666da-cd16-4626-925c-8a8513603609",
+            "6adddf0b-0682-435d-9a1b-d7f53495ea9a",
+            "99b0f571-7d70-424f-8aa5-5e3833e4993c",
+            "65b28d01-d592-4bd5-a786-5d03da487009"
+        ],
+        "controller": [
+            "2acc0743-9117-4234-8b8a-cfd963de5421"
+        ],
+        "model": [
+            "98b278f6-7701-4e84-aef1-f7f091d44afb",
+            "ab601898-77d8-4461-af2e-789202cae5c4",
+            "55a49d6d-0d03-4dd6-b925-f260aa17ee13",
+            "7d42c78f-079a-4c66-861c-d252a57632b8"
+        ],
+        "resource": [
+            "f632f61b-5216-40f3-8bf0-07b1d02b775f",
+            "20b8ed3e-33b1-4310-b931-da7eb2ab3ce3"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

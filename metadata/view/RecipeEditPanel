@@ -1,0 +1,59 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "height": null,
+        "width": null,
+        "designer|userClassName": "RecipeEditPanel",
+        "designer|userAlias": "recipeeditpanel",
+        "layout": "vbox",
+        "title": "My Panel"
+    },
+    "designerId": "2adef336-54f3-4ab7-b92e-140b8e3016d0",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1
+            },
+            "designerId": "8354505f-6867-4367-bd10-3268a00c955b",
+            "masterInstanceId": "475bbb49-e554-4442-9c7f-bc824d77cb8c"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 2
+            },
+            "designerId": "a8262070-b349-42fd-a455-93580099132a",
+            "masterInstanceId": "986b764d-836d-4d3e-b56a-e65eac1033ed"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1
+            },
+            "designerId": "3a2e1f25-2836-44ff-860e-4de24de73995",
+            "masterInstanceId": "085ff9ae-58ee-4285-8605-dac1a682c983"
+        }
+    ]
+}

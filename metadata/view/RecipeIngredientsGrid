@@ -1,0 +1,266 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "recipeingredientsedit",
+        "designer|userClassName": "RecipeIngredientsGrid",
+        "designer|userAlias": "recipeingredientsgrid",
+        "title": "Recipe Ingredients",
+        "store": null
+    },
+    "designerId": "085ff9ae-58ee-4285-8605-dac1a682c983",
+    "cn": [
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top",
+                "width": null
+            },
+            "designerId": "2bd3d580-2318-4a60-8f0e-15e49c9b940c",
+            "cn": [
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "id": "addingredienttorecipe",
+                        "itemId": "addingredienttorecipe",
+                        "designer|displayName": "Ingredient",
+                        "designer|createAlias": null,
+                        "fieldLabel": "Ingredient",
+                        "labelAlign": "top",
+                        "displayField": "name",
+                        "queryMode": "local",
+                        "store": "Ingredients",
+                        "valueField": "id"
+                    },
+                    "designerId": "1d3421a4-dcad-421c-9f32-4b300ecab4be"
+                },
+                {
+                    "type": "Ext.toolbar.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "width": 10
+                    },
+                    "designerId": "0f592e34-2d26-406f-8d27-3803ceeb6f23"
+                },
+                {
+                    "type": "Ext.form.field.Number",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "id": "addqtytorecipe",
+                        "itemId": "addqtytorecipe",
+                        "designer|displayName": "Qty",
+                        "designer|createAlias": null,
+                        "fieldLabel": "Qty",
+                        "labelAlign": "top"
+                    },
+                    "designerId": "8d3c6cfd-6386-4bda-bc3f-a3fd84d26c5f"
+                },
+                {
+                    "type": "Ext.toolbar.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "width": 10
+                    },
+                    "designerId": "124f72b1-891b-4713-b555-959f3349e0bf"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "id": "addunittorecipe",
+                        "itemId": "addunittorecipe",
+                        "designer|displayName": "Unit",
+                        "designer|createAlias": null,
+                        "fieldLabel": "Unit",
+                        "labelAlign": "top",
+                        "displayField": "name",
+                        "queryMode": "local",
+                        "store": "Units",
+                        "valueField": "id"
+                    },
+                    "designerId": "665d474f-8010-419f-abf3-080950855c68"
+                },
+                {
+                    "type": "Ext.toolbar.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "width": 10
+                    },
+                    "designerId": "f00d1431-488c-4ee2-9bbf-165a25228fa4"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "addIngredientToRecipe",
+                        "layout|flex": null,
+                        "width": 100,
+                        "designer|displayName": "Add Ingredient",
+                        "icon": null,
+                        "iconCls": "add",
+                        "text": "Add"
+                    },
+                    "designerId": "3a209af5-1404-4abc-a41b-4e7e464182af",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "ingredient_id",
+                "text": "Name",
+                "flex": 1
+            },
+            "designerId": "36f95a7e-7686-4565-b6ad-e087856b8354",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "renderer",
+                        "designer|params": [
+                            "value",
+                            "metaData",
+                            "record",
+                            "rowIndex",
+                            "colIndex",
+                            "store",
+                            "view"
+                        ],
+                        "implHandler": [
+                            "var s = Ext.getStore('Ingredients');\r",
+                            "var i = s.getAt(s.find('id', value)); \r",
+                            "return i.get('name');"
+                        ]
+                    },
+                    "designerId": "d3572045-5113-489e-a1d7-3d3ba578ca0f"
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.column.Number",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "qty",
+                "text": "Qty",
+                "flex": 1
+            },
+            "designerId": "b63ceb7d-7c24-46b8-94f5-5bd50e114c4b"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "unit_id",
+                "text": "Unit",
+                "flex": 1
+            },
+            "designerId": "b01c56ac-24aa-4bd6-ad98-1a1f5ff47bc1",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "renderer",
+                        "designer|params": [
+                            "value",
+                            "metaData",
+                            "record",
+                            "rowIndex",
+                            "colIndex",
+                            "store",
+                            "view"
+                        ],
+                        "implHandler": [
+                            "var s = Ext.getStore('Units');\r",
+                            "var u = s.getAt(s.find('id',value));\r",
+                            "return u.get('abbr');"
+                        ]
+                    },
+                    "designerId": "a129d307-2bf4-4259-b178-c67e70019622"
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.View",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "designerId": "468c2183-8f8c-4bc3-bc67-b66e3ead1c5d"
+        }
+    ]
+}

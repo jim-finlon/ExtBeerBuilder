@@ -1,0 +1,103 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "RecipesGridPanel",
+        "designer|userAlias": "recipesgridpanel",
+        "title": "My Grid Panel",
+        "store": "Recipes"
+    },
+    "designerId": "475bbb49-e554-4442-9c7f-bc824d77cb8c",
+    "cn": [
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top"
+            },
+            "designerId": "de0ab38f-0a0e-4938-9677-cc14fb73a519",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "action": "addRecipe",
+                        "text": "New Recipe"
+                    },
+                    "designerId": "bba4ef61-7a41-4a6b-a85b-81e8673869a7",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "name",
+                "text": "Name",
+                "flex": 1
+            },
+            "designerId": "9bdb2f63-33ca-431e-a92d-e18080f33b1b"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "type",
+                "text": "Type",
+                "flex": 1
+            },
+            "designerId": "5728bf52-9bd9-4b79-a63d-74d38ae7c26f"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "style",
+                "text": "Style",
+                "flex": 1
+            },
+            "designerId": "3dc90631-e3cf-490c-99a3-078a377482b7"
+        },
+        {
+            "type": "Ext.grid.View",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "designerId": "642ca0ae-af83-4846-9af1-47dd16d2dda6"
+        }
+    ]
+}

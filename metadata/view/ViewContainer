@@ -1,0 +1,103 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "border": false,
+        "height": null,
+        "id": "viewcontainer",
+        "width": null,
+        "designer|userClassName": "ViewContainer",
+        "designer|userAlias": "viewcontainer",
+        "layout": "fit",
+        "title": "View Recipes"
+    },
+    "designerId": "3eb18d10-d468-4c8c-b737-51c1252f3000",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "border": false,
+                "layout": "vbox",
+                "title": null
+            },
+            "designerId": "72fcd290-4c73-4eed-9c76-97525d7f332b",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "Recipe Detail",
+                        "itemId": "header",
+                        "layout|flex": 1,
+                        "dock": "top"
+                    },
+                    "configAlternates": {
+                        "html": "string"
+                    },
+                    "designerId": "1183d939-5ed4-4a24-ad06-382fad044883",
+                    "masterInstanceId": "49e4ebe0-8506-47b8-b3de-b06484a85454"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "sidebar",
+                        "width": 180,
+                        "autoScroll": true,
+                        "layout|flex": 1,
+                        "dock": "left"
+                    },
+                    "designerId": "fcdc0e8a-cdf4-4798-aecc-419d921885e1",
+                    "masterInstanceId": "e54c07cb-fd8a-4cbd-b33b-82cefdc9eff7"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "border": null,
+                        "itemId": "recipe",
+                        "layout|flex": 2
+                    },
+                    "designerId": "3ae8e4fc-a75b-431a-9e48-7fec62612cad",
+                    "masterInstanceId": "a68d2ea2-f6ec-4fbf-a6cc-567a1efaadcc"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "ingredients",
+                        "layout|flex": 1
+                    },
+                    "designerId": "854e193e-11ad-4f48-8a03-b6157436a8e4",
+                    "masterInstanceId": "250663dc-0a15-4703-9ccc-0304370da706"
+                }
+            ]
+        }
+    ]
+}
