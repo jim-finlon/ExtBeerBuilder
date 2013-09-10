@@ -91,7 +91,7 @@
             "designerId": "23280854-46c6-4af9-873d-ad4fc33fe899"
         },
         {
-            "type": "Ext.form.field.TextArea",
+            "type": "Ext.form.field.HtmlEditor",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -105,7 +105,7 @@
             "designerId": "5f72b727-38f2-456f-b3f9-e36fd8ae176c"
         },
         {
-            "type": "Ext.form.field.TextArea",
+            "type": "Ext.form.field.HtmlEditor",
             "reference": {
                 "name": "items",
                 "type": "array"

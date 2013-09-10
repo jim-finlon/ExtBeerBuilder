@@ -40,7 +40,7 @@ Ext.define('BeerBuilder.view.RecipeEditPanel', {
                 },
                 {
                     xtype: 'recipeformpanel',
-                    flex: 2
+                    flex: 3
                 },
                 {
                     xtype: 'recipeingredientsgrid',

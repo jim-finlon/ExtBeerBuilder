@@ -24,7 +24,7 @@ Ext.define('BeerBuilder.view.MainTabPanel', {
         'BeerBuilder.view.RecipeEditPanel'
     ],
 
-    height: 800,
+    height: 850,
     activeTab: 0,
 
     initComponent: function() {

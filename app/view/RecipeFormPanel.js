@@ -54,13 +54,13 @@ Ext.define('BeerBuilder.view.RecipeFormPanel', {
                     name: 'style'
                 },
                 {
-                    xtype: 'textareafield',
+                    xtype: 'htmleditor',
                     anchor: '100%',
                     fieldLabel: 'Description',
                     name: 'description'
                 },
                 {
-                    xtype: 'textareafield',
+                    xtype: 'htmleditor',
                     anchor: '100%',
                     fieldLabel: 'Instructions',
                     name: 'instructions'
