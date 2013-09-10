@@ -55,6 +55,27 @@ Ext.define('BeerBuilder.view.RecipesGridPanel', {
                     dataIndex: 'style',
                     text: 'Style',
                     flex: 1
+                },
+                {
+                    xtype: 'actioncolumn',
+                    flex: 1,
+                    items: [
+                        {
+                            handler: function(view, rowIndex, colIndex, item, e, record, row) {
+                                debugger;
+                                var ris = Ext.getStore('RecipeIngredients');
+
+                                //var ris = getRecipeIngredientsGrid().getStore();
+                                ris.each(function(record) {
+                                    ris.remove(record);    
+                                });
+
+                                view.getStore().removeAt(rowIndex);
+                            },
+                            icon: 'resources/delete.gif',
+                            tooltip: 'Delete Recipe'
+                        }
+                    ]
                 }
             ]
         });

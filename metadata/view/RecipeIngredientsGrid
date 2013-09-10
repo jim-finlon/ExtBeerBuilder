@@ -261,6 +261,56 @@
             },
             "codeClass": null,
             "designerId": "468c2183-8f8c-4bc3-bc67-b66e3ead1c5d"
+        },
+        {
+            "type": "Ext.grid.column.Action",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "5a5eeacc-eb46-4a0f-a1c3-a0010d52e155",
+            "cn": [
+                {
+                    "type": "actioncolumnitem",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "icon": "resources/delete.gif",
+                        "tooltip": "Delete Ingredient"
+                    },
+                    "designerId": "b8ba5aa4-3e21-4612-9d8b-b6ea26d8fcb4",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "handler",
+                                "designer|params": [
+                                    "view",
+                                    "rowIndex",
+                                    "colIndex",
+                                    "item",
+                                    "e",
+                                    "record",
+                                    "row"
+                                ],
+                                "implHandler": [
+                                    "view.getStore().removeAt(rowIndex);"
+                                ]
+                            },
+                            "designerId": "402da262-d1dc-41b0-a4d3-0670b3dd1566"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

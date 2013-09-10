@@ -157,6 +157,61 @@
                 "pluginId": "unitroweditor"
             },
             "designerId": "30f4363d-63a3-43bf-9498-6c99d62acc8a"
+        },
+        {
+            "type": "Ext.grid.column.Action",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "tooltip": null,
+                "flex": 1,
+                "icon": null
+            },
+            "designerId": "527101e6-42b3-4722-8189-230d232c7f49",
+            "cn": [
+                {
+                    "type": "actioncolumnitem",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "icon": "resources/delete.gif",
+                        "tooltip": "Delete Unit"
+                    },
+                    "designerId": "b3044b21-8dbe-4a12-8bb1-c75dcb732638",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "handler",
+                                "designer|params": [
+                                    "view",
+                                    "rowIndex",
+                                    "colIndex",
+                                    "item",
+                                    "e",
+                                    "record",
+                                    "row"
+                                ],
+                                "implHandler": [
+                                    "view.getStore().removeAt(rowIndex);"
+                                ]
+                            },
+                            "designerId": "5ab3ee79-267a-49b8-8e88-4adec1887d69"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

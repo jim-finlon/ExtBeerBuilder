@@ -66,6 +66,19 @@ Ext.define('BeerBuilder.view.UnitGridPanel', {
                         xtype: 'textfield',
                         allowBlank: false
                     }
+                },
+                {
+                    xtype: 'actioncolumn',
+                    flex: 1,
+                    items: [
+                        {
+                            handler: function(view, rowIndex, colIndex, item, e, record, row) {
+                                view.getStore().removeAt(rowIndex);
+                            },
+                            icon: 'resources/delete.gif',
+                            tooltip: 'Delete Unit'
+                        }
+                    ]
                 }
             ],
             plugins: [

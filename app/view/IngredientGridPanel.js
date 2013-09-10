@@ -36,6 +36,19 @@ Ext.define('BeerBuilder.view.IngredientGridPanel', {
                         allowBlank: false,
                         size: 100
                     }
+                },
+                {
+                    xtype: 'actioncolumn',
+                    flex: 1,
+                    items: [
+                        {
+                            handler: function(view, rowIndex, colIndex, item, e, record, row) {
+                                view.getStore().removeAt(rowIndex);
+                            },
+                            icon: 'resources/delete.gif',
+                            tooltip: 'Delete Ingredient'
+                        }
+                    ]
                 }
             ],
             dockedItems: [

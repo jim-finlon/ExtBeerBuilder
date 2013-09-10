@@ -108,6 +108,18 @@ Ext.define('BeerBuilder.view.RecipeIngredientsGrid', {
                     dataIndex: 'unit_id',
                     text: 'Unit',
                     flex: 1
+                },
+                {
+                    xtype: 'actioncolumn',
+                    items: [
+                        {
+                            handler: function(view, rowIndex, colIndex, item, e, record, row) {
+                                view.getStore().removeAt(rowIndex);
+                            },
+                            icon: 'resources/delete.gif',
+                            tooltip: 'Delete Ingredient'
+                        }
+                    ]
                 }
             ]
         });
