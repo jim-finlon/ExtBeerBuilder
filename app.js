@@ -23,5 +23,18 @@ Ext.application({
     controllers: [
         'Recipes'
     ],
-    name: 'BeerBuilder'
+    name: 'BeerBuilder',
+
+    launch: function() {
+        Ext.override(Ext.form.Panel, {
+            clearForm: function () {
+                me = this;
+                me.getForm().getFields().each(function (f) {
+                    f.originalValue=undefined;
+                    f.setValue('');
+                });
+            }
+        });
+    }
+
 });

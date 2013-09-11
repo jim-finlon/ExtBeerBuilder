@@ -6,6 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
+        "id": "recipeformpanel",
+        "itemId": "recipeformpanel",
         "designer|userClassName": "RecipeFormPanel",
         "designer|userAlias": "recipeformpanel",
         "title": "Recipe"
@@ -56,6 +58,7 @@
             "codeClass": null,
             "userConfig": {
                 "layout|anchor": "100%",
+                "id": "recipenamefield",
                 "padding": "2 0 0 0 ",
                 "fieldLabel": "Recipe Name",
                 "name": "name"
@@ -71,6 +74,7 @@
             "codeClass": null,
             "userConfig": {
                 "layout|anchor": "100%",
+                "id": "recipetypefield",
                 "fieldLabel": "Type",
                 "name": "type"
             },
@@ -85,6 +89,7 @@
             "codeClass": null,
             "userConfig": {
                 "layout|anchor": "100%",
+                "id": "recipestylefield",
                 "fieldLabel": "Style",
                 "name": "style"
             },
@@ -99,6 +104,7 @@
             "codeClass": null,
             "userConfig": {
                 "layout|anchor": "100%",
+                "id": "recipedescriptionfield",
                 "fieldLabel": "Description",
                 "name": "description"
             },
@@ -113,6 +119,7 @@
             "codeClass": null,
             "userConfig": {
                 "layout|anchor": "100%",
+                "id": "recipeinstructionsfield",
                 "fieldLabel": "Instructions",
                 "name": "instructions"
             },

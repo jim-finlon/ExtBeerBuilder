@@ -6,6 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
+        "id": "recipesgridpanel",
+        "itemId": "recipesgridpanel",
         "designer|userClassName": "RecipesGridPanel",
         "designer|userAlias": "recipesgridpanel",
         "title": "My Grid Panel",
@@ -43,6 +45,55 @@
                             "group": "(Custom Properties)",
                             "name": "action",
                             "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "text": "Delete Recipe"
+                    },
+                    "designerId": "d2655163-47dd-4ccc-81ba-e15b68aad7e4",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "var formpanel = Ext.getCmp('recipeformpanel');\r",
+                                    "var form = formpanel.getForm();\r",
+                                    "var record = form.getRecord();\r",
+                                    "//remove recipe ingredients from store\r",
+                                    "\r",
+                                    "var ris = Ext.getStore('RecipeIngredients');\r",
+                                    "var records = [];\r",
+                                    "ris.each(function(record) {\r",
+                                    "\trecords.push(record);\r",
+                                    "});\r",
+                                    "ris.remove(records);\r",
+                                    "\r",
+                                    "\r",
+                                    "var rs = Ext.getStore('Recipes');\r",
+                                    "rs.remove(record);\r",
+                                    "formpanel.clearForm();"
+                                ]
+                            },
+                            "designerId": "18dc7c6c-f6a2-4c77-8640-4cac9939c89b"
                         }
                     ]
                 }
@@ -98,69 +149,6 @@
             },
             "codeClass": null,
             "designerId": "642ca0ae-af83-4846-9af1-47dd16d2dda6"
-        },
-        {
-            "type": "Ext.grid.column.Action",
-            "reference": {
-                "name": "columns",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "tooltip": null,
-                "flex": 1,
-                "icon": null
-            },
-            "designerId": "1fb29d4d-cbf7-455e-b4cb-50c8c35af3d2",
-            "cn": [
-                {
-                    "type": "actioncolumnitem",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "icon": "resources/delete.gif",
-                        "tooltip": "Delete Recipe"
-                    },
-                    "designerId": "0197bf50-b60a-4cd4-b963-98457a945912",
-                    "cn": [
-                        {
-                            "type": "fixedfunction",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "fn": "handler",
-                                "designer|params": [
-                                    "view",
-                                    "rowIndex",
-                                    "colIndex",
-                                    "item",
-                                    "e",
-                                    "record",
-                                    "row"
-                                ],
-                                "implHandler": [
-                                    "debugger;\r",
-                                    "var ris = Ext.getStore('RecipeIngredients');\r",
-                                    "\r",
-                                    "//var ris = getRecipeIngredientsGrid().getStore();\r",
-                                    "ris.each(function(record) {\r",
-                                    "ris.remove(record);    \r",
-                                    "});\r",
-                                    "\r",
-                                    "view.getStore().removeAt(rowIndex);"
-                                ]
-                            },
-                            "designerId": "a3f07787-8182-43e7-831f-5ff9ffd16bd4"
-                        }
-                    ]
-                }
-            ]
         }
     ]
 }

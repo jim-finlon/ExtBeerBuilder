@@ -200,8 +200,8 @@
                     "selectedRecord.set(selectedValues);\r",
                     "\r",
                     "if (this.adding){\r",
-                    "this.adding = undefined;\r",
-                    "  var store = Ext.getStore('Recipes');  \r",
+                    "    this.adding = undefined;\r",
+                    "    var store = Ext.getStore('Recipes');  \r",
                     "    store.add(selectedRecord);\r",
                     "}"
                 ],

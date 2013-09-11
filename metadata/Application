@@ -12,5 +12,30 @@
         ],
         "name": "BeerBuilder"
     },
-    "designerId": "application"
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "Ext.override(Ext.form.Panel, {\r",
+                    "    clearForm: function () {\r",
+                    "        me = this;\r",
+                    "        me.getForm().getFields().each(function (f) {\r",
+                    "            f.originalValue=undefined;\r",
+                    "            f.setValue('');\r",
+                    "        });\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "cdee9160-a99b-42fd-b267-354324541ba4"
+        }
+    ]
 }

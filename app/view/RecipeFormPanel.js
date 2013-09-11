@@ -17,6 +17,8 @@ Ext.define('BeerBuilder.view.RecipeFormPanel', {
     extend: 'Ext.form.Panel',
     alias: 'widget.recipeformpanel',
 
+    id: 'recipeformpanel',
+    itemId: 'recipeformpanel',
     title: 'Recipe',
 
     initComponent: function() {
@@ -37,6 +39,7 @@ Ext.define('BeerBuilder.view.RecipeFormPanel', {
                 {
                     xtype: 'textfield',
                     anchor: '100%',
+                    id: 'recipenamefield',
                     padding: '2 0 0 0 ',
                     fieldLabel: 'Recipe Name',
                     name: 'name'
@@ -44,24 +47,28 @@ Ext.define('BeerBuilder.view.RecipeFormPanel', {
                 {
                     xtype: 'textfield',
                     anchor: '100%',
+                    id: 'recipetypefield',
                     fieldLabel: 'Type',
                     name: 'type'
                 },
                 {
                     xtype: 'textfield',
                     anchor: '100%',
+                    id: 'recipestylefield',
                     fieldLabel: 'Style',
                     name: 'style'
                 },
                 {
                     xtype: 'htmleditor',
                     anchor: '100%',
+                    id: 'recipedescriptionfield',
                     fieldLabel: 'Description',
                     name: 'description'
                 },
                 {
                     xtype: 'htmleditor',
                     anchor: '100%',
+                    id: 'recipeinstructionsfield',
                     fieldLabel: 'Instructions',
                     name: 'instructions'
                 }
